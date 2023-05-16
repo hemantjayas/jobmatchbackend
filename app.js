@@ -20,7 +20,7 @@ app.use("/users", userController);
 
 app.listen(PORT, async function () {
     await connect()
-    console.log("listening on port 1234")
+    console.log(`listening on port ${PORT}`)
 });
 
 
