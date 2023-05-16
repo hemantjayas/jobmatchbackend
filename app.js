@@ -1,7 +1,9 @@
-// const mongoose = require("mongoose");
+require('dotenv').config()
+const mongoose = require("mongoose");
 const express = require("express");
 const connect = require("./configs/db")
 const app = express();
+const PORT = process.env.PORT;
 
 
 
@@ -16,7 +18,7 @@ app.use(express.json());
 app.use("/users", userController);
 
 
-app.listen("1234", async function () {
+app.listen(PORT, async function () {
     await connect()
     console.log("listening on port 1234")
 });
