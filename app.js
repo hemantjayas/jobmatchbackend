@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const express = require("express");
 const connect = require("./configs/db")
 const app = express();
-const PORT = process.env.PORT;
+const PORT = 8000;
 
 
 
