@@ -1,8 +1,8 @@
 const mongoose = require("mongoose");
-
+const str = process.env.DBURL
 const connect = ()=>{
     console.log("database connected")
-    return mongoose.connect("mongodb+srv://hemantjayas03:hem123@cluster0.xepnwbp.mongodb.net/users")
+    return mongoose.connect(str)
 }
 
 module.exports = connect;
