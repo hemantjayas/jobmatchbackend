@@ -3,7 +3,8 @@ const mongoose = require("mongoose");
 const express = require("express");
 const connect = require("./configs/db")
 const app = express();
-const PORT = 8000;
+const PORT = process.env.PORT || 8000;
+const PASSWORD= process.env.PASSWORD
 
 
 
@@ -19,7 +20,7 @@ app.use("/users", userController);
 
 
 app.listen(PORT, async function () {
-    await connect()
+    await connect(PASSWORD)
     
     console.log(`listening on port ${PORT}`)
 });
