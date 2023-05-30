@@ -18,7 +18,7 @@ const userController=  require("./src/controllers/userController")
 app.use(express.json());
 
 app.use("/users", userController);
-app.use("/post", userController);
+
 
 
 app.listen(PORT, async function () {

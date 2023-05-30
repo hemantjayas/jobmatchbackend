@@ -12,18 +12,9 @@ const userSchema = mongoose.Schema({
     versionKey: false,
     timestamps: true,
 });
-const postSchema = mongoose.Schema({
 
-    first_name: {type: String, required: true },
-    last_name: {type: String, required: true },
-},
-{
-    versionKey: false,
-    timestamps: true,
-});
 
 const User = mongoose.model("user", userSchema); // users schema 
-const Post = mongoose.model("post", userSchema); // post schema 
 
 module.exports = User
-module.exports = Post
+
